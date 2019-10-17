@@ -56,7 +56,7 @@ event http_header(c: connection, is_orig: bool, name: string, value: string) &pr
                                     c$http$header_accept_charset = value;
                                     break;
                                 case "ACCEPT-ENCODING":
-				    c$http$header_accept_encoding = value;
+				                    c$http$header_accept_encoding = value;
                                     break;
                                 case "ACCEPT-LANGUAGE":
                                     c$http$header_accept_language = value;
