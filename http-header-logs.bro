@@ -79,9 +79,6 @@ event http_header(c: connection, is_orig: bool, name: string, value: string) &pr
                                 case "CONTENT-TYPE":
                                     c$http$header_content_type = value;
                                     break;
-                                case "PROXY-AUTHORIZATION":
-                                    c$http$header_proxy_authorization = value;
-                                    break;
                                 }
 			}
                 }
