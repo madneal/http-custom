@@ -40,7 +40,7 @@ event file_over_new_connection(f: fa_file, c: connection, is_orig: bool)
 	{
 	if ( is_orig && c?$http && c$http?$method && c$http$method == "POST" )
 		{
-		c$http$postdata = encode_base64(c$http$postdata)
+		#c$http$postdata = encode_base64(c$http$postdata);
 		Files::add_analyzer(f, Files::ANALYZER_DATA_EVENT, [$stream_event=log_post_bodies]);
 		}
 	}
